@@ -17,10 +17,15 @@
 //     console.log(healthcareData)
 
 var width = parseInt(d3.select("#scatter").style("width"));
-var height = width - width / 4;
+
+var height = width - width / 3.9;
+
 var margin = 20;
+
 var labelArea = 110;
+
 var tPadBottom = 40;
+
 var tPadLeft = 40;
 
 var svg = d3
@@ -53,7 +58,7 @@ function xTextRefresh() {
         "translate(" +
         ((width - labelArea) / 2 + labelArea) +
         ", " +
-        (height - margin - tPadBottom) + 
+        (height - margin - tPadBottom) +
         ")"
     );
 }
@@ -88,7 +93,7 @@ yTextRefresh();
 
 yText
     .append("text")
-    .attr("y",26)
+    .attr("y", 26)
     .attr("data-name", "healthcare")
     .attr("data-axis", "y")
     .attr("class", "aText active y")
